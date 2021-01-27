@@ -7,8 +7,8 @@ namespace AZ_EPortfolio.Models
 {
     public class Evidence
     {
-        private int evidenceID;
-        private String evidenceName;
-        private EvidenceTypes evidenceType;
+        private string EvidenceId { get; set; }
+        private string EvidenceName { get; set; }
+        private EvidenceTypes EvidenceType { get; set; }
     }
 }
