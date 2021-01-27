@@ -7,11 +7,11 @@ namespace AZ_EPortfolio.Models
 {
         public class ImageEvidence : Evidence
         {
-            private int imageEvidenceID;
-            private String imageName;
-            private ImageFormats imageFormat;
-            private double height;
-            private double width;
+            private string ImageEvidenceId { get; set; }
+            private string ImageName { get; set; }
+            private ImageFormats ImageFormat { get; set; }
+            private double Height { get; set; }
+            private double Width { get; set; }
 
-        }
+    }
 }
