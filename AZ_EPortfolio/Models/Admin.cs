@@ -7,8 +7,8 @@ namespace AZ_EPortfolio.Models
 {
     public class Admin : User
     {
-		private int AdminId { get; set }
-		private string Role { get; set }
+		private int AdminId { get; set; }
+		private string Role { get; set; }
 
 	}
 }

@@ -7,8 +7,8 @@ namespace AZ_EPortfolio.Models
 {
     public class Employer : User
     {
-        private string EmployerId { get; set }
-        private string CompanyName { get; set }
-        private string Description { get; set }
+        private string EmployerId { get; set; }
+        private string CompanyName { get; set; }
+        private string Description { get; set; }
     }
 }
