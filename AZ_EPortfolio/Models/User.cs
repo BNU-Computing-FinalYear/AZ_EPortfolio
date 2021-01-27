@@ -7,12 +7,12 @@ namespace AZ_EPortfolio.Models
 {
     public class User
     {
-		private int userID;
-		private String firstName;
-		private String lastName;
-		private String career;
-		private String email;
-		private String password;
+		private string UserId { get; set; }
+		private string FirstName { get; set; }
+		private string LastName { get; set; }
+		private string Career { get; set; }
+		private string Email { get; set; }
+		private string Password { get; set; }
 
 	}
 }
