@@ -7,10 +7,10 @@ namespace AZ_EPortfolio.Models
 {
     public class Portfolio
     {
-        private int portfolioID;
-        private String skills;
-        private String knowledge;
-        private String experience;
+        private string PortfolioId { get; set; }
+        private string Skills { get; set; }
+        private string Knowledge { get; set; }
+        private string Experience { get; set; }
 
     }
 }
