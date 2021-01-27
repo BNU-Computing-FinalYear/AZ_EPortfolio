@@ -7,11 +7,11 @@ namespace AZ_EPortfolio.Models
 {
     public class Template
     {
-		private int templateID;
-		private String summary;
-		private blob picture;
-		private String skillTags;
-		private String resume;
-		private String education;
+		private string TemplateId { get; set; }
+		private string Summary { get; set; }
+		private blob Iicture { get; set; }
+		private string SkillTags { get; set; }
+		private string Resume { get; set; }
+		private string Education { get; set; }
 	}
 }
