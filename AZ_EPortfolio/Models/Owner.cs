@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AZ_EPortfolio.Models
 {
-    public class Owner
+    public class Owner : User
     {
         private int ownerID;
         private EmploymentStatus employmentStatus;
