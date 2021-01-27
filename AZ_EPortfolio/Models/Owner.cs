@@ -7,10 +7,10 @@ namespace AZ_EPortfolio.Models
 {
     public class Owner : User
     {
-        private int ownerID;
-        private EmploymentStatus employmentStatus;
-        private int mobileNo;
-        private OwnerTypes ownerType;
+        private string OwnerId { get; set; }
+        private EmploymentStatus EmploymentStatus { get; set; }
+        private int MobileNo { get; set; }
+        private OwnerTypes OwnerType { get; set; }
 
     }
 }
