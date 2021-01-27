@@ -7,9 +7,9 @@ namespace AZ_EPortfolio.Models
 {
     public class TextEvidence : Evidence
     {
-        private int textEvidenceID;
-        private String text;
-        private TextFormats textFormat;
+        private int TextEvidenceID { get; set }
+        private string Text { get; set }
+        private TextFormats TextFormat { get; set }
 
     }
 }
