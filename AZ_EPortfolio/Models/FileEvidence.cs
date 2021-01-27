@@ -7,9 +7,9 @@ namespace AZ_EPortfolio.Models
 {
     public class FileEvidence : Evidence
     {
-        private int fileEvidenceID;
-        private String fileName;
-        private FileFormats fileFormat;
+        private string FileEvidenceId { get; set; }
+        private string FileName { get; set; }
+        private FileFormats FileFormat { get; set; }
 
     }
 }
