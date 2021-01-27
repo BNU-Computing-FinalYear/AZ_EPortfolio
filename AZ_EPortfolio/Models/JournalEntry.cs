@@ -7,11 +7,9 @@ namespace AZ_EPortfolio.Models
 {
     public class JournalEntry
     {
-        private int journalEntryID;
-        private String title;
-        private date date;
-        private int imageEvidenceID;
-        private int textEvidenceID;
+        private string JournalEntryId { get; set; }
+        private string Title { get; set; }
+        private DateTime date { get; set; }
 
     }
 }
