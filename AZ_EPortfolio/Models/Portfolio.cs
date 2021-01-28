@@ -12,18 +12,15 @@ namespace AZ_EPortfolio.Models
         [Key]
         public string PortfolioId { get; set; }
 
-        [Required]
-        [StringLength(100)]
+        [StringLength(1000)]
         [DisplayName("Skills")]
         public string Skills { get; set; }
 
-        [Required]
         [StringLength(5000)]
         [DisplayName("Knowledge")]
         [DataType(DataType.MultilineText)]
         public string Knowledge { get; set; }
 
-        [Required]
         [StringLength(5000)]
         [DisplayName("Experience")]
         [DataType(DataType.MultilineText)]

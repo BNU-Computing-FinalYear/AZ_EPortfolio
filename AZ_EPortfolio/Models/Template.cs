@@ -26,18 +26,18 @@ namespace AZ_EPortfolio.Models
 
 		[Required]
 		[StringLength(50)]
-		[DisplayName("Description")]
+		[DisplayName("Skill Tags")]
 		public string SkillTags { get; set; }
 
 		[Required]
 		[StringLength(5000)]
-		[DisplayName("Description")]
+		[DisplayName("Resume")]
 		[DataType(DataType.MultilineText)]
 		public string Resume { get; set; }
 
 		[Required]
 		[StringLength(5000)]
-		[DisplayName("Description")]
+		[DisplayName("Education")]
 		[DataType(DataType.MultilineText)]
 		public string Education { get; set; }
 	}
