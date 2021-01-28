@@ -12,6 +12,8 @@ namespace AZ_EPortfolio.Models
 		[Key]
 		public string TemplateId { get; set; }
 
+		public TemplateTypes TemplateType { get; set; }
+
 		[Required]
 		[StringLength(5000)]
 		[DisplayName("Description")]
