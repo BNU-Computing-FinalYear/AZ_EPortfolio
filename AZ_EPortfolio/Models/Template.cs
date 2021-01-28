@@ -10,7 +10,9 @@ namespace AZ_EPortfolio.Models
     public class Template
     {
 		[Key]
-		public string TemplateId { get; set; }
+		public int TemplateId { get; set; }
+
+		public int PortfolioId { get; set; }
 
 		public TemplateTypes TemplateType { get; set; }
 
@@ -42,5 +44,7 @@ namespace AZ_EPortfolio.Models
 		[DisplayName("Education")]
 		[DataType(DataType.MultilineText)]
 		public string Education { get; set; }
+
+		public virtual Portfolio Portfolio { get; set; }
 	}
 }

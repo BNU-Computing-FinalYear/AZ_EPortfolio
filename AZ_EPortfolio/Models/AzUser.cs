@@ -10,7 +10,7 @@ namespace AZ_EPortfolio.Models
     public class AzUser
     {
 		[Key]
-		public string AzUserId { get; set; }
+		public int AzUserId { get; set; }
 
 		[StringLength(50)]
 		public string UserId { get; set; }

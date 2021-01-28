@@ -10,7 +10,7 @@ namespace AZ_EPortfolio.Models
     public class Employer : AzUser
     {
         [Key]
-        public string EmployerId { get; set; }
+        public int EmployerId { get; set; }
 
         [Required]
         [StringLength(100)]

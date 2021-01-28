@@ -26,5 +26,6 @@ namespace AZ_EPortfolio.Models
         [DataType(DataType.MultilineText)]
         public string Experience { get; set; }
 
+        public virtual ICollection<Template> Templates { get; set; }
     }
 }

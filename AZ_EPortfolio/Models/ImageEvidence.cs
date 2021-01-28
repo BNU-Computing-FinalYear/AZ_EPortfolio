@@ -10,7 +10,7 @@ namespace AZ_EPortfolio.Models
         public class ImageEvidence : Evidence
         {
             [Key]
-            public string ImageEvidenceId { get; set; }
+            public int ImageEvidenceId { get; set; }
 
             [Required]
             [StringLength(20)]

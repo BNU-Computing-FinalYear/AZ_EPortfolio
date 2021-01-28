@@ -10,7 +10,7 @@ namespace AZ_EPortfolio.Models
     public class FileEvidence : Evidence
     {
         [Key]
-        public string FileEvidenceId { get; set; }
+        public int FileEvidenceId { get; set; }
 
         [Required]
         [StringLength(30)]
