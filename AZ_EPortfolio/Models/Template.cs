@@ -46,5 +46,6 @@ namespace AZ_EPortfolio.Models
 		public string Education { get; set; }
 
 		public virtual Portfolio Portfolio { get; set; }
+
 	}
 }
