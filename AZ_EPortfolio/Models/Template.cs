@@ -10,35 +10,35 @@ namespace AZ_EPortfolio.Models
     public class Template
     {
 		[Key]
-		private string TemplateId { get; set; }
+		public string TemplateId { get; set; }
 
 		[Required]
 		[StringLength(5000)]
 		[DisplayName("Description")]
 		[DataType(DataType.MultilineText)]
-		private string Summary { get; set; }
+		public string Summary { get; set; }
 
 		[Required]
 		[StringLength(500)]
 		[DataType(DataType.Url)]
 		[DisplayName("Image URL")]
-		private string Picture { get; set; }
+		public string Picture { get; set; }
 
 		[Required]
 		[StringLength(50)]
 		[DisplayName("Description")]
-		private string SkillTags { get; set; }
+		public string SkillTags { get; set; }
 
 		[Required]
 		[StringLength(5000)]
 		[DisplayName("Description")]
 		[DataType(DataType.MultilineText)]
-		private string Resume { get; set; }
+		public string Resume { get; set; }
 
 		[Required]
 		[StringLength(5000)]
 		[DisplayName("Description")]
 		[DataType(DataType.MultilineText)]
-		private string Education { get; set; }
+		public string Education { get; set; }
 	}
 }

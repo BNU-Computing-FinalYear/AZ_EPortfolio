@@ -10,14 +10,14 @@ namespace AZ_EPortfolio.Models
     public class FileEvidence : Evidence
     {
         [Key]
-        private string FileEvidenceId { get; set; }
+        public string FileEvidenceId { get; set; }
 
         [Required]
         [StringLength(30)]
         [DisplayName("File Name")]
-        private string FileName { get; set; }
+        public string FileName { get; set; }
 
-        private FileFormats FileFormat { get; set; }
+        public FileFormats FileFormat { get; set; }
 
     }
 }

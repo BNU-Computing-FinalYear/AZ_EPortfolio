@@ -10,12 +10,12 @@ namespace AZ_EPortfolio.Models
     public class Admin : User
     {
 		[Key]
-		private int AdminId { get; set; }
+		public int AdminId { get; set; }
 
         [Required]
         [StringLength(50)]
         [DisplayName("Role Name")]
-        private string Role { get; set; }
+        public string Role { get; set; }
 
 	}
 }

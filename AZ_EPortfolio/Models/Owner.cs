@@ -10,16 +10,16 @@ namespace AZ_EPortfolio.Models
     public class Owner : User
     {
         [Key]
-        private string OwnerId { get; set; }
+        public string OwnerId { get; set; }
 
-        private EmploymentStatus EmploymentStatus { get; set; }
+        public EmploymentStatus EmploymentStatus { get; set; }
 
         [Required]
         [StringLength(16, ErrorMessage = "Please enter a valid UK contact number")]
         [DisplayName("Mobile No")]
-        private int MobileNo { get; set; }
+        public int MobileNo { get; set; }
 
-        private OwnerTypes OwnerType { get; set; }
+        public OwnerTypes OwnerType { get; set; }
 
     }
 }

@@ -10,18 +10,18 @@ namespace AZ_EPortfolio.Models
     public class JournalEntry
     {
         [Key]
-        private string JournalEntryId { get; set; }
+        public string JournalEntryId { get; set; }
 
         [Required]
         [StringLength(50)]
         [DisplayName("Title")]
-        private string Title { get; set; }
+        public string Title { get; set; }
 
         [Required]
         [Display(Name = "Date")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        private DateTime date { get; set; }
+        public DateTime date { get; set; }
 
     }
 }

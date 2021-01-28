@@ -10,15 +10,15 @@ namespace AZ_EPortfolio.Models
     public class TextEvidence : Evidence
     {
         [Key]
-        private int TextEvidenceID { get; set; }
+        public int TextEvidenceID { get; set; }
 
         [Required]
         [StringLength(5000)]
         [DisplayName("Description")]
         [DataType(DataType.MultilineText)]
-        private string Text { get; set; }
+        public string Text { get; set; }
 
-        private TextFormats TextFormat { get; set; }
+        public TextFormats TextFormat { get; set; }
 
     }
 }

@@ -10,18 +10,18 @@ namespace AZ_EPortfolio.Models
         public class ImageEvidence : Evidence
         {
             [Key]
-            private string ImageEvidenceId { get; set; }
+            public string ImageEvidenceId { get; set; }
 
             [Required]
             [StringLength(20)]
             [DisplayName("Image Name")]
-            private string ImageName { get; set; }
+            public string ImageName { get; set; }
 
-            private ImageFormats ImageFormat { get; set; }
+            public ImageFormats ImageFormat { get; set; }
 
-            private double Height { get; set; }
+            public double Height { get; set; }
 
-            private double Width { get; set; }
+            public double Width { get; set; }
 
     }
 }

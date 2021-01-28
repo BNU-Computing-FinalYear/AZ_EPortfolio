@@ -10,17 +10,17 @@ namespace AZ_EPortfolio.Models
     public class Employer : User
     {
         [Key]
-        private string EmployerId { get; set; }
+        public string EmployerId { get; set; }
 
         [Required]
         [StringLength(100)]
         [DisplayName("Company Name")]
-        private string CompanyName { get; set; }
+        public string CompanyName { get; set; }
 
         [Required]
         [StringLength(5000)]
         [DisplayName("Description")]
         [DataType(DataType.MultilineText)]
-        private string Description { get; set; }
+        public string Description { get; set; }
     }
 }
