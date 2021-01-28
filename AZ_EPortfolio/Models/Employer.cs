@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AZ_EPortfolio.Models
 {
-    public class Employer : User
+    public class Employer : AzUser
     {
         [Key]
         public string EmployerId { get; set; }

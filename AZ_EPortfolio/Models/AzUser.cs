@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace AZ_EPortfolio.Models
 {
-    public class User
+    public class AzUser
     {
 		[Key]
+		public string AzUserId { get; set; }
+
+		[StringLength(50)]
 		public string UserId { get; set; }
 
 		[Required]
