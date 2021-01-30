@@ -9,7 +9,6 @@ namespace AZ_EPortfolio.Models
 {
     public class Template
     {
-		[Key]
 		public int TemplateId { get; set; }
 
 		public int PortfolioId { get; set; }

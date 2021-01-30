@@ -10,7 +10,7 @@ namespace AZ_EPortfolio.Models
     public class JournalEntry
     {
         [Key]
-        public string JournalEntryId { get; set; }
+        public int JournalEntryId { get; set; }
 
         [Required]
         [StringLength(50)]

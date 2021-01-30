@@ -9,11 +9,11 @@ namespace AZ_EPortfolio.Models
 {
     public class Portfolio
     {
-        [Key]
-        public string PortfolioId { get; set; }
+        public int PortfolioId { get; set; }
 
-        [StringLength(1000)]
+        [StringLength(5000)]
         [DisplayName("Skills")]
+        [DataType(DataType.MultilineText)]
         public string Skills { get; set; }
 
         [StringLength(5000)]

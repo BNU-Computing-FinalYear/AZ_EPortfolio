@@ -10,7 +10,7 @@ namespace AZ_EPortfolio.Models
     public class Owner : AzUser
     {
         [Key]
-        public string OwnerId { get; set; }
+        public int OwnerId { get; set; }
 
         public EmploymentStatus EmploymentStatus { get; set; }
 
