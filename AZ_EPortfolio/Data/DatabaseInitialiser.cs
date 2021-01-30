@@ -9,7 +9,6 @@ namespace AZ_EPortfolio.Data
     {
         public static void Initialise(ApplicationDbContext context)
         {
-            context.Database.EnsureCreated();
         }
     }
 }

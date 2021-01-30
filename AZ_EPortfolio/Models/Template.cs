@@ -28,7 +28,7 @@ namespace AZ_EPortfolio.Models
 		public string Picture { get; set; }
 
 		[Required]
-		[StringLength(50)]
+		[StringLength(70)]
 		[DisplayName("Skill Tags")]
 		public string SkillTags { get; set; }
 
