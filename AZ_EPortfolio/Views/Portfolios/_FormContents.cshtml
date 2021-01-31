@@ -1,0 +1,30 @@
+﻿@model AZ_EPortfolio.Models.Portfolio
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<input type="hidden" asp-for="UserKey" />
+<div class="form-group">
+    <label asp-for="Author" class="control-label"></label>
+    <input asp-for="Author" class="form-control" />
+    <span asp-validation-for="Author" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Name" class="control-label"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Skills" class="control-label"></label>
+    <textarea asp-for="Skills" class="form-control"></textarea>
+    <span asp-validation-for="Skills" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Knowledge" class="control-label"></label>
+    <textarea asp-for="Knowledge" class="form-control"></textarea>
+    <span asp-validation-for="Knowledge" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Experience" class="control-label"></label>
+    <textarea asp-for="Experience" class="form-control"></textarea>
+    <span asp-validation-for="Experience" class="text-danger"></span>
+</div>

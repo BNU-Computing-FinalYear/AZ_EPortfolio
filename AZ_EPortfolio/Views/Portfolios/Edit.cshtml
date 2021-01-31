@@ -14,21 +14,7 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="PortfolioId" />
-            <div class="form-group">
-                <label asp-for="Skills" class="control-label"></label>
-                <textarea asp-for="Skills" class="form-control"></textarea>
-                <span asp-validation-for="Skills" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Knowledge" class="control-label"></label>
-                <textarea asp-for="Knowledge" class="form-control"></textarea>
-                <span asp-validation-for="Knowledge" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Experience" class="control-label"></label>
-                <textarea asp-for="Experience" class="form-control"></textarea>
-                <span asp-validation-for="Experience" class="text-danger"></span>
-            </div>
+            <partial name="_FormContents" />
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

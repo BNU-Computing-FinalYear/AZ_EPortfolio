@@ -11,6 +11,20 @@ namespace AZ_EPortfolio.Models
     {
         public int PortfolioId { get; set; }
 
+        [StringLength(64)]
+        [DisplayName("User Id")]
+        public string UserKey { get; set; }
+
+        [Required]
+        [StringLength(30)]
+        [DisplayName("Portfolio Name")]
+        public string Name { get; set; }
+
+        [Required]
+        [StringLength(30)]
+        [DisplayName("Author Name")]
+        public string Author { get; set; }
+
         [StringLength(5000)]
         [DisplayName("Skills")]
         [DataType(DataType.MultilineText)]

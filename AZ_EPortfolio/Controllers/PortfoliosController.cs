@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AZ_EPortfolio.Data;
 using AZ_EPortfolio.Models;
+using System.Security.Claims;
 
 namespace AZ_EPortfolio.Controllers
 {
@@ -54,8 +55,17 @@ namespace AZ_EPortfolio.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PortfolioId,Skills,Knowledge,Experience")] Portfolio portfolio)
+        public async Task<IActionResult> Create([Bind("PortfolioId,UserKey,Name,Author,Skills,Knowledge,Experience")] Portfolio portfolio)
         {
+            if(portfolio.UserKey is null & User.Identity.IsAuthenticated)
+            {
+                portfolio.UserKey = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            }
+            else
+            {
+                portfolio.UserKey = "Unknown user";
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(portfolio);
@@ -86,7 +96,7 @@ namespace AZ_EPortfolio.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PortfolioId,Skills,Knowledge,Experience")] Portfolio portfolio)
+        public async Task<IActionResult> Edit(int id, [Bind("PortfolioId,UserKey,Name,Author,Skills,Knowledge,Experience")] Portfolio portfolio)
         {
             if (id != portfolio.PortfolioId)
             {
