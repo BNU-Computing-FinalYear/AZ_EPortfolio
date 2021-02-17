@@ -35,10 +35,14 @@ namespace AZ_EPortfolio.Models
 		[DataType(DataType.EmailAddress)]
 		public string Email { get; set; }
 
+		public EmploymentStatus EmploymentStatus { get; set; }
+
 		[Required]
-		[StringLength(20)]
-		[DataType(DataType.Password)]
-		public string Password { get; set; }
+		[StringLength(16, ErrorMessage = "Please enter a valid UK contact number")]
+		[DisplayName("Mobile No")]
+		public int MobileNo { get; set; }
+
+		public UserTypes UserType { get; set; }
 
 	}
 }

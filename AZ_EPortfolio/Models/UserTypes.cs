@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 
 namespace AZ_EPortfolio.Models
 {
-    public enum OwnerTypes
+    public enum UserTypes
     {
         Undergraduate,
 		Graduate,
-
+        Admin,
+        Employer,
+        Developer
     }
 }
