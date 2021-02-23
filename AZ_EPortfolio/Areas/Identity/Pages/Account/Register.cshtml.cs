@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using AZ_EPortfolio.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -45,6 +47,19 @@ namespace AZ_EPortfolio.Areas.Identity.Pages.Account
 
         public class InputModel
         {
+            [Required]
+            [StringLength(20)]
+            [DisplayName("First Name")]
+            public string FirstName { get; set; }
+
+            [Required]
+            [StringLength(20)]
+            [DisplayName("Last Name")]
+            public string LastName { get; set; }
+
+            [DisplayName("Educational Status")]
+            public UserTypes UserType { get; set; }
+
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]

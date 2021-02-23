@@ -26,23 +26,17 @@ namespace AZ_EPortfolio.Models
 		public string LastName { get; set; }
 
 		[Required]
-		[StringLength(50)]
-		[DisplayName("Career")]
-		public string Career { get; set; }
-
-		[Required]
 		[StringLength(20)]
 		[DataType(DataType.EmailAddress)]
 		public string Email { get; set; }
 
 		public EmploymentStatus EmploymentStatus { get; set; }
 
+		public UserTypes UserType { get; set; }
+
 		[Required]
 		[StringLength(16, ErrorMessage = "Please enter a valid UK contact number")]
 		[DisplayName("Mobile No")]
 		public int MobileNo { get; set; }
-
-		public UserTypes UserType { get; set; }
-
 	}
 }

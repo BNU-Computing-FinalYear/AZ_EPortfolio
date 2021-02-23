@@ -9,6 +9,7 @@ namespace AZ_EPortfolio.Models
     {
         Undergraduate,
 		Graduate,
+        Apprentice,
         Admin,
         Employer,
         Developer
