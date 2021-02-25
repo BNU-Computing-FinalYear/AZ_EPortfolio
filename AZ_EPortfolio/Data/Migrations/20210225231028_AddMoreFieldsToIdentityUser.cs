@@ -1,4 +1,4 @@
-﻿miusing Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AZ_EPortfolio.Data.Migrations
 {
