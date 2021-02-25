@@ -14,6 +14,7 @@ namespace AZ_EPortfolio.Data
         {
         }
 
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
 
         public DbSet<Portfolio> Portfolios { get; set; }
 
