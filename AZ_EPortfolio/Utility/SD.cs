@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AZ_EPortfolio.Utility
 {
-    public class SD
+    public static class SD
     {
     }
 }
