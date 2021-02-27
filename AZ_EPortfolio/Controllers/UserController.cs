@@ -11,6 +11,11 @@ namespace AZ_EPortfolio.Controllers
     public class UserController : Controller
     {
         private readonly ApplicationDbContext _db;
+
+        public UserController()
+        {
+
+        }
         public IActionResult Index()
         {
             return View();
