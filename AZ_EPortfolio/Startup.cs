@@ -35,6 +35,9 @@ namespace AZ_EPortfolio
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            //Adding single object for sending emails
+            services.AddSingleton<IEmailSender, EmailSender>();
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
