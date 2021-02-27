@@ -8,9 +8,12 @@ using Microsoft.EntityFrameworkCore;
 using AZ_EPortfolio.Data;
 using AZ_EPortfolio.Models;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
+using AZ_EPortfolio.Utility;
 
 namespace AZ_EPortfolio.Controllers
 {
+    [Authorize(Roles = SD.AdminUser)]
     public class AzUsersController : Controller
     {
         private readonly ApplicationDbContext _db;
