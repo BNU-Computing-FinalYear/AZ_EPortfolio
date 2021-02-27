@@ -50,6 +50,27 @@ namespace AZ_EPortfolio.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public async Task<IActionResult> UnLock(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            //Returns the first object. If not found, returns null
+            var applicationUser = await _db.ApplicationUser.FirstOrDefaultAsync(m => m.Id == id);
+
+            if (applicationUser == null)
+            {
+                return NotFound();
+            }
+
+            applicationUser.LockoutEnd = DateTime.Now;
+
+            await _db.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
 
         //// GET: AzUsers
         //public async Task<IActionResult> Index()
