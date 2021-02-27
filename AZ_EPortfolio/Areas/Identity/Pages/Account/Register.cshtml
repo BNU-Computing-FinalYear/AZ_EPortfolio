@@ -1,6 +1,7 @@
 ﻿@page
 @model RegisterModel
 @using AZ_EPortfolio.Models;
+@using AZ_EPortfolio.Utility;
 
 
 @{
@@ -44,8 +45,19 @@
                 <input asp-for="Input.ConfirmPassword" class="form-control" />
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-primary">Register</button>
-        </form>
+            @if (User.IsInRole(SD.AdminUser))
+            {
+        <div class="form-group">
+            <input type="radio" name="rdUserRole" value="@SD.UndergraduateUser" checked /> @SD.UndergraduateUser
+            <input type="radio" name="rdUserRole" value="@SD.PostgraduateUser" checked /> @SD.PostgraduateUser
+            <input type="radio" name="rdUserRole" value="@SD.AdminUser" checked /> @SD.AdminUser
+            <input type="radio" name="rdUserRole" value="@SD.EmployerUser" checked /> @SD.EmployerUser
+            <input type="radio" name="rdUserRole" value="@SD.DeveloperUser" checked /> @SD.DeveloperUser
+            <input type="radio" name="rdUserRole" value="@SD.ApprenticeUser" checked /> @SD.ApprenticeUser
+        </div>
+            }
+                    <button type="submit" class="btn btn-primary">Register</button>
+            </form>
     </div>
     <div class="col-md-6 col-md-offset-2">
         <section>
