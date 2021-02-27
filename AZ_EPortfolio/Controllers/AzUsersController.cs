@@ -11,7 +11,6 @@ using System.Security.Claims;
 
 namespace AZ_EPortfolio.Controllers
 {
-    [Area("Admin")]
     public class AzUsersController : Controller
     {
         private readonly ApplicationDbContext _db;
