@@ -7,6 +7,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using AZ_EPortfolio.Models;
+using AZ_EPortfolio.Utility;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -104,6 +105,32 @@ namespace AZ_EPortfolio.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     //Assigning Roles to New User
+                    if(!await _roleManager.RoleExistsAsync(SD.UndergraduateUser))
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(SD.UndergraduateUser));
+                    }
+                    if (!await _roleManager.RoleExistsAsync(SD.PostgraduateUser))
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(SD.PostgraduateUser));
+                    }
+                    if (!await _roleManager.RoleExistsAsync(SD.ApprenticeUser))
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(SD.ApprenticeUser));
+                    }
+                    if (!await _roleManager.RoleExistsAsync(SD.AdminUser))
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(SD.AdminUser));
+                    }
+                    if (!await _roleManager.RoleExistsAsync(SD.EmployerUser))
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(SD.EmployerUser));
+                    }
+                    if (!await _roleManager.RoleExistsAsync(SD.DeveloperUser))
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(SD.DeveloperUser));
+                    }
+                    await _userManager.AddToRoleAsync(user, SD.AdminUser);
+
                     _logger.LogInformation("User created a new account with password.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
