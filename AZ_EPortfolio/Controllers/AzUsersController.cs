@@ -28,6 +28,29 @@ namespace AZ_EPortfolio.Controllers
             return View(await _db.ApplicationUser.Where(u => u.Id != claim.Value).ToListAsync());
         }
 
+        public async Task<IActionResult> Lock(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            //Returns the first object. If not found, returns null
+            var applicationUser = await _db.ApplicationUser.FirstOrDefaultAsync(m => m.Id == id);
+
+            if (applicationUser == null)
+            {
+                return NotFound();
+            }
+
+            applicationUser.LockoutEnd = DateTime.Now.AddYears(1000);
+
+            await _db.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
         //// GET: AzUsers
         //public async Task<IActionResult> Index()
         //{
