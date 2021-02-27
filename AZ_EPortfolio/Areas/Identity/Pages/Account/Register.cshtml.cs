@@ -89,6 +89,9 @@ namespace AZ_EPortfolio.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
+            //Fetching values of rdUserRole radio type
+            string role = Request.Form["rdUserRole"].ToString(); //so, if the admin user has selected Postgraduate, it will be Postgraduate inside the role string
+
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
