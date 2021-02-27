@@ -12,9 +12,9 @@ namespace AZ_EPortfolio.Controllers
     {
         private readonly ApplicationDbContext _db;
 
-        public UserController()
+        public UserController(ApplicationDbContext db)
         {
-
+            _db = db;
         }
         public IActionResult Index()
         {
