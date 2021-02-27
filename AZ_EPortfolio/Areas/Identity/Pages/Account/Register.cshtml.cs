@@ -132,7 +132,49 @@ namespace AZ_EPortfolio.Areas.Identity.Pages.Account
                     {
                         await _roleManager.CreateAsync(new IdentityRole(SD.DeveloperUser));
                     }
-                    await _userManager.AddToRoleAsync(user, SD.AdminUser);
+                    //check the value of string role
+                    if (role == SD.DeveloperUser)
+                    {
+                        await _userManager.AddToRoleAsync(user, SD.DeveloperUser);
+                    }
+                    else
+                    {
+                        if (role == SD.PostgraduateUser)
+                        {
+                            await _userManager.AddToRoleAsync(user, SD.PostgraduateUser);
+                        }
+                        else
+                        {
+                            if (role == SD.ApprenticeUser)
+                            {
+                                await _userManager.AddToRoleAsync(user, SD.ApprenticeUser);
+                            }
+                            else
+                            {
+                                if (role == SD.EmployerUser)
+                                {
+                                    await _userManager.AddToRoleAsync(user, SD.EmployerUser);
+                                }
+                                else
+                                {
+                                    if (role == SD.AdminUser)
+                                    {
+                                        await _userManager.AddToRoleAsync(user, SD.AdminUser);
+                                    }
+                                    else
+                                    {
+                                        if (role == SD.UndergraduateUser)
+                                        {
+                                            await _userManager.AddToRoleAsync(user, SD.UndergraduateUser);
+                                            await _signInManager.SignInAsync(user, isPersistent: false);
+                                            return LocalRedirect(returnUrl);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return RedirectToAction("Index", "AzUsers");
 
                     //_logger.LogInformation("User created a new account with password.");
 
@@ -155,8 +197,6 @@ namespace AZ_EPortfolio.Areas.Identity.Pages.Account
                     //{
                     //
                     //Directly signing in the user
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
                     //}
                 }
                 foreach (var error in result.Errors)
