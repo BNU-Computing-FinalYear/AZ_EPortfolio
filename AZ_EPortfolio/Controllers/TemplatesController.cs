@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using AZ_EPortfolio.Data;
 using AZ_EPortfolio.Models;
 
-namespace AZ_EPortfolio
+namespace AZ_EPortfolio.Controllers
 {
     public class TemplatesController : Controller
     {
