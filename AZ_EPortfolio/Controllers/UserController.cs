@@ -18,6 +18,7 @@ namespace AZ_EPortfolio.Controllers
         }
         public IActionResult Index()
         {
+            var claimsIdentity = (ClaimsIdentity)this.User.Identity;
             return View();
         }
     }
