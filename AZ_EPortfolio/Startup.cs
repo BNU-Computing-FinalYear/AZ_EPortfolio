@@ -33,6 +33,7 @@ namespace AZ_EPortfolio
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
         }
