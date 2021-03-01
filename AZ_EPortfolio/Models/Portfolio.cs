@@ -25,20 +25,9 @@ namespace AZ_EPortfolio.Models
         [DisplayName("Author Name")]
         public string Author { get; set; }
 
-        [StringLength(5000)]
-        [DisplayName("Skills")]
-        [DataType(DataType.MultilineText)]
-        public string Skills { get; set; }
+        public ICollection<PortfolioElement> Elements { get; set; }
 
-        [StringLength(5000)]
-        [DisplayName("Knowledge")]
-        [DataType(DataType.MultilineText)]
-        public string Knowledge { get; set; }
-
-        [StringLength(5000)]
-        [DisplayName("Experience")]
-        [DataType(DataType.MultilineText)]
-        public string Experience { get; set; }
+        public ICollection<Education> EducationElements { get; set; }
 
         public virtual ICollection<Template> Templates { get; set; }
     }

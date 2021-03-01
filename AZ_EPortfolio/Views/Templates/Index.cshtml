@@ -94,6 +94,22 @@
                         </div>
                     </div>
                 </div>
+                //Striped progress
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -114,20 +130,75 @@
                         </div>
                     </div>
                 </div>
-                        
+
             </div>
         </div>
-                <br />
-                <div class="card">
-                    <div class="card-body">
-                        <h3>Notifications</h3>
-                        This is some text within a card body.
-                    </div>
-                </div>
+        <br />
+        <div class="card">
+            <div class="card-body">
+                <h3>Notifications</h3>
+                This is some text within a card body.
             </div>
+        </div>
+    </div>
+</div>
+
+//nested navbar
+<nav id="navbar-example3" class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="nav nav-pills flex-column">
+        <a class="nav-link" href="#item-1">Item 1</a>
+        <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+            <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+        </nav>
+        <a class="nav-link" href="#item-2">Item 2</a>
+        <a class="nav-link" href="#item-3">Item 3</a>
+        <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+            <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+        </nav>
+    </nav>
+</nav>
+
+<div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+    <h4 id="item-1">Item 1</h4>
+    <p>...</p>
+    <h5 id="item-1-1">Item 1-1</h5>
+    <p>...</p>
+    <h5 id="item-1-2">Item 1-2</h5>
+    <p>...</p>
+    <h4 id="item-2">Item 2</h4>
+    <p>...</p>
+    <h4 id="item-3">Item 3</h4>
+    <p>...</p>
+    <h5 id="item-3-1">Item 3-1</h5>
+    <p>...</p>
+    <h5 id="item-3-2">Item 3-2</h5>
+    <p>...</p>
 </div>
 
 <br />
+
+//loading
+<div class="spinner-grow" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-secondary" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+
+<br />
+
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -159,35 +230,36 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TemplateType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Summary)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Picture)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SkillTags)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Resume)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Education)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Portfolio.Author)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.TemplateId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.TemplateId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.TemplateId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TemplateType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Summary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Picture)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SkillTags)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Resume)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Education)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Portfolio.Author)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.TemplateId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.TemplateId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.TemplateId">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
