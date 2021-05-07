@@ -32,7 +32,9 @@
     <None Include="wwwroot\Images\digital education.jpg" />
     <None Include="wwwroot\Images\eportfolio_process.jpg" />
     <None Include="wwwroot\Images\mobile.gif" />
+    <None Include="wwwroot\Images\presentation.gif" />
     <None Include="wwwroot\Images\research_portfolios.png" />
+    <None Include="wwwroot\Images\tablet.png" />
     <None Include="wwwroot\Images\team_resolutions.gif" />
     <None Include="wwwroot\Images\white_display.gif" />
   </ItemGroup>
