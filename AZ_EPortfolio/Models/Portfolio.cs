@@ -25,8 +25,8 @@ namespace AZ_EPortfolio.Models
         [DisplayName("Author Name")]
         public string Author { get; set; }
 
-        public ICollection<PortfolioElement> Elements { get; set; }
-
+        public ICollection<PortfolioElement> PortfolioElements { get; set; }
+        
         public ICollection<Education> EducationElements { get; set; }
 
         public virtual ICollection<Template> Templates { get; set; }
