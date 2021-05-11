@@ -27,17 +27,29 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Templates" asp-action="Index">Undergraduates</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Templates" asp-action="Index">Graduates</a>
+                        </li>
                         @if (User.IsInRole(SD.AdminUser))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="AzUsers" asp-action="Index">Users</a>
                             </li>
+                        }
+                        @if (User.IsInRole(SD.DeveloperUser))
+                        {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Templates" asp-action="Index">Undergraduates</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="AzUsers" asp-action="Index">Users</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Templates" asp-action="Index">Graduates</a>
-                            </li>
+                        }
+                        @if (User.IsInRole(SD.EmployerUser))
+                        {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="AzUsers" asp-action="Index">Users</a>
                             </li>
@@ -55,9 +67,39 @@
     </div>
 
     <footer class="text-muted">
-        <div class="container">
-            &copy; 2021 - AZ_EPortfolio - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+        <div class="jumbotron">
+            <section class="row">
+                <section class="col-lg-3">
+                    <h2>Support</h2>
+                    <p><a class="link-dark" asp-area="" asp-controller="Home" asp-action="SupportedBrowsersDevices">Supported Browsers and Devices</a></p>
+                    <p><a class="link-dark" asp-area="" asp-controller="Home" asp-action="AcceptedFileFormats">Accepted File Formats</a></p>
+                    <p><a class="link-dark" asp-area="" asp-controller="Home" asp-action="FormattingImages">Formatting Images</a></p>
+                    <p><a class="link-dark" asp-area="" asp-controller="Home" asp-action="VideoRenditions">Video Renditions</a></p>
+                </section>
+                <section class="col-lg-3">
+                    <h2>Address</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2466.598343320795!2d-0.8116601842187419!3d51.81349937968658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876f7a97167218f%3A0xc27980591e589d4c!2s59+Walton+St%2C+Aylesbury!5e0!3m2!1sen!2suk!4v1543933744042" width="340" height="150" frameborder="0" style="border: 0" allowfullscreen>
+                    </iframe>
+                </section>
+                <section class="col-lg-3">
+                    <h2>Contact</h2>
+                    <div>
+                        <strong>Email: </strong><a href="mailto:info@azeportfolio-developer.co.uk">info@azeportfolio-developer.co.uk</a><br /><br />
+                        <strong>Telephone:</strong>
+                        01296 306 651 (Office)<br />
+                    </div>
+                </section>
+                <section class="col-lg-3">
+                    <h2>Development</h2>
+                    <div>
+                        <strong>Developed by: </strong><p>Ana Lucia Petinga Zorro</p>
+                        <p>BSc in Computing and Web Development</p>
+                        <p>Buckinghamshire New University</p><br /><br />
+                        <strong>AZ E-Portfolio Project &copy; 2021</strong>
+                    </div>
+                </section>
+            </section>
+</div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -72,6 +114,7 @@
             tinycomments_author: 'Ana Zorro',
         });
     </script>
+    
     @await RenderSectionAsync("Scripts", required: false)
 
 

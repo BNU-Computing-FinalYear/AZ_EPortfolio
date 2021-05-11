@@ -26,6 +26,32 @@ namespace AZ_EPortfolio.Controllers
         public IActionResult Privacy()
         {
             return View();
+
+        }
+
+        public IActionResult TermsConditions()
+        {
+            return View();
+        }
+
+        public IActionResult SupportedBrowsersDevices()
+        {
+            return View();
+        }
+
+        public IActionResult AcceptedFileFormats()
+        {
+            return View();
+        }
+
+        public IActionResult FormattingImages()
+        {
+            return View();
+        }
+
+        public IActionResult VideoRenditions()
+        {
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
