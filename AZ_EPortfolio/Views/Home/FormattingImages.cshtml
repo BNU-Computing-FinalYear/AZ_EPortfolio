@@ -3,21 +3,39 @@
 }
 
 <div class="container">
-    <h1>@ViewData["Title"]</h1>
+    <h1>@ViewData["Title"]</h1><br />
     <section>
+        <h2>Image Renditions</h2><br />
         <p>
-            This section describes the moral terms of this software service (ethical considerations in computing). Normal standards of honesty and integrity are to be followed such as confidentiality, competence, and intellectual property rights. The user has legal rights in respect to his personal data and how it is processed on AZ e-Portfolio. What data is collected? Full name, ID, DOB, Genre, e-mail address and password. This information will be used to verify accounts and activity. In the developer’s legitimate interests, AZ e-Portfolio seeks to prevent and detect hackers from accessing the users account details maintaining the user’s personal data safe and secure.
+            Resolution: when you upload images to Adobe Portfolio, they are displayed at their full resolution.
         </p>
         <p>
-            By registering, the user agrees with the Software Engineering Code of Ethics of organisations such as ACM, the IEEE and the British Computer Society.
+            Sizing: different versions of that image are generated, each with a different width. The height changes relative to the width to preserve the image's aspect ratio.
         </p>
+        <p>
+            Selection of the appropriate image size based on your visitor's screen size. The biggest rendition generated is 3840px for retina displays on 1920px wide screens and 4k as well.
+        </p>
+        <p>
+            Your image may display larger or smaller on your site depending on your:
+        </p>
+        <ul>Website Container</ul>
+        <ul>Page Container</ul>
+        <ul>Max-image width within customizations (if applied)</ul><br /><br />
+        <h2>File Formats</h2><br />
+        <p>
+            The following are accepted::
+        </p>
+        <ul>JPEG</ul>
+        <ul>GIF</ul>
+        <ul>PNG </ul><br /><br />
+        <h2>Best practices</h2><br />
+        <ul>Save images in RGB color mode.</ul>
+        <ul>Images can be up to 50MB but uploading them at 20MB or lower is recommended.</ul>
+        <ul>Keep in mind that larger images can impact site performance.</ul>
+        <ul>Uploading images that are the size of the container they're filling, or at most 2x that dimension for Retina resolution is recommended.</ul>
+        <ul>Uploading cover images that are below 1MB is recommended.</ul>
+
         <br />
-        <div>
-            <img src="/Images/TnC.png" class="d-block w-75" alt="tnc">
-        </div>
-        <br />
-        <p>
-            References in brackets identify where the Password Policy for authenticating to AZ e-Portfolio service, where the policy meets requirements for establishing secure techniques from the Information Security Forum, ISO/IEC 27001:2013. (ISF: 2014 – CF6.3.2, 2020)( ISO27001: 2013 – A.9.2.1, 2020).
-        </p>
     </section>
+    <br /><br />
 </div>

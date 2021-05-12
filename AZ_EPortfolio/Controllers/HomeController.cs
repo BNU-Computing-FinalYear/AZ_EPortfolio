@@ -54,6 +54,22 @@ namespace AZ_EPortfolio.Controllers
             return View();
         }
 
+        public IActionResult WriteBetterBio()
+        {
+            return View();
+        }
+        public IActionResult EssentialSteps()
+        {
+            return View();
+        }
+        public IActionResult PromoteYourself()
+        {
+            return View();
+        }
+        public IActionResult AttractEmployers()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
