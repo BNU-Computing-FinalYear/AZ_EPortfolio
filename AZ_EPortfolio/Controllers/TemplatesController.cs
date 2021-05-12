@@ -156,5 +156,10 @@ namespace AZ_EPortfolio.Controllers
         {
             return _context.Templates.Any(e => e.TemplateId == id);
         }
+
+        public IActionResult TemplateGallery()
+        {
+            return View();
+        }
     }
 }
